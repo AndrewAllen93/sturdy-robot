@@ -72,7 +72,7 @@ function init() {
       .prompt(questions)
       .then((answers) => {
         const markdown = generateMarkdown(answers);
-        writeToFile("README.md", markdown);
+        writeToFile("example.md", markdown);
       })
       .catch((error) => {
         console.error('An error occurred:', error);
