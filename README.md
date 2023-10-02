@@ -24,7 +24,7 @@ Creating professional ReadMe using node.js
 [License](https://opensource.org/licenses/MIT)
 
 ## Contributing
-more whores
+
 
 ## Tests
 Manual testing
