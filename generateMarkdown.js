@@ -1,37 +1,39 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  const licenseBadges = {
     MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-    if (license && licenseBadges[license]) {
-        return licenseBadges[license];
-      } else {
-        return ''; 
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
     Apache: '[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-    if (license && licenseBadges[license]) {
-        return licenseBadges[license];
-      } else {
-        return ''; 
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
     GPL: '[![License: GPL](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
-    if (license && licenseBadges[license]) {
-        return licenseBadges[license];
-      } else {
-        return ''; 
+  };
+
+  if (license && licenseBadges[license]) {
+    return licenseBadges[license];
+  } else {
+    return '';
+  }
 }
 
-// TODO: Create a function to generate markdown for README
+function renderLicenseLink(license) {
+  const licenseLinks = {
+    MIT: 'https://opensource.org/licenses/MIT',
+    Apache: 'https://opensource.org/licenses/Apache-2.0',
+    GPL: 'https://www.gnu.org/licenses/gpl-3.0',
+  };
+
+  if (license && licenseLinks[license]) {
+    return `[License](https://opensource.org/licenses/${license})`;
+  } else {
+    return '';
+  }
+}
+
 function generateMarkdown(data) {
-  return `# ${data.title}
-  ${licenseBadge}
+  const licenseBadge = renderLicenseBadge(data.license);
+  const licenseLink = renderLicenseLink(data.license);
+
+  return `
+# ${data.title}
+
+${licenseBadge}
 
 ## Description
 ${data.description}
@@ -45,16 +47,16 @@ ${data.description}
 - [Questions](#questions)
 
 ## Installation
-${data.installation}
+${data.install}
 
 ## Usage
 ${data.usage}
 
 ## License
-${renderLicenseLink(data.license)}
+${licenseLink}
 
 ## Contributing
-${data.contributing}
+${data.contGuide}
 
 ## Tests
 ${data.tests}
@@ -64,6 +66,4 @@ If you have any questions, please feel free to reach out to me via email at ${da
 `;
 }
 
-
 module.exports = generateMarkdown;
-
