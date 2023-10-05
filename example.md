@@ -1,10 +1,10 @@
 
-# New Repo
+# New Repository
 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Creating a custom ReadMe using Node
+An example repository
 
 ## Table of Contents
 - [Installation](#installation)
@@ -15,19 +15,19 @@ Creating a custom ReadMe using Node
 - [Questions](#questions)
 
 ## Installation
-Node
+open terminal on index.js file and running node index.js and following prompts
 
 ## Usage
-To create readme
+Running node index.js in open terminal
 
 ## License
-
+[License](https://opensource.org/licenses/MIT)
 
 ## Contributing
-Seperate Branches
+anything
 
 ## Tests
-Automated testing
+Manual testing
 
 ## Questions
 If you have any questions, please feel free to reach out to me via email at allenkandrew@gmail.com or visit my GitHub profile at [AndrewAllen93](https://github.com/AndrewAllen93).
